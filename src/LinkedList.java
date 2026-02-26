@@ -27,6 +27,15 @@ public class LinkedList {
 	  }
   }
 	
+  public void addFirst(int data) {
+	  Node newNode = new Node(data);
+	  newNode.next = headNode;
+	  headNode = newNode;
+	  
+	  
+  }
+  
+  
 	public void print() {
 		Node current = headNode;
 		

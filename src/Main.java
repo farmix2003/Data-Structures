@@ -10,6 +10,9 @@ public class Main {
 		srLinkedList.add(3);
 		srLinkedList.add(7);
 		
+		
+		srLinkedList.addFirst(6);
+		
 		srLinkedList.print();
 
 	}
