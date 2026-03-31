@@ -1,4 +1,3 @@
-import javax.management.RuntimeErrorException;
 
 public class StaticStack<T> {
    
@@ -22,7 +21,7 @@ public class StaticStack<T> {
 	@SuppressWarnings("unchecked")
 	public T pop() {
 		if(isEmpty()) {
-			throw new RuntimeErrorException(null, "Stack is empty");
+			throw new IllegalStateException("Stack is empty");
 		}
 		T item = (T) elements[top];
 		elements[top--] = null;
@@ -32,7 +31,7 @@ public class StaticStack<T> {
 	@SuppressWarnings("unchecked")
 	public T peek() {
 		if(isEmpty()) {
-			throw new RuntimeErrorException(null, "Stack is empty");
+			throw new IllegalStateException("Stack is empty");
 		}
 		return (T) elements[top];
 	}

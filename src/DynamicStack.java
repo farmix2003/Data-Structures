@@ -1,6 +1,5 @@
 import java.util.Iterator;
 
-import javax.management.RuntimeErrorException;
 
 public class DynamicStack<T> implements Iterable<T> {
     
@@ -45,7 +44,7 @@ public class DynamicStack<T> implements Iterable<T> {
 	
 	public T pop() {
 		if(isEmpty()) {
-			throw new RuntimeErrorException(null, "Stack is empty");
+			throw new IllegalStateException("Stack is empty");
 		}
 		T valueT = top.data;
 		top = top.nextNode;
@@ -55,7 +54,7 @@ public class DynamicStack<T> implements Iterable<T> {
 	
 	public T peek() {
 		if(isEmpty()) {
-			throw new RuntimeErrorException(null, "Stack is empty");
+			throw new IllegalStateException("Stack is empty");
 		}
 		return top.data;
 	}
