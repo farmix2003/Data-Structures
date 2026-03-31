@@ -1,6 +1,8 @@
+import java.util.Iterator;
+
 import javax.management.RuntimeErrorException;
 
-public class DynamicStack<T> {
+public class DynamicStack<T> implements Iterable<T> {
     
 	private Node<T> top;
 	private int size;
@@ -11,8 +13,26 @@ public class DynamicStack<T> {
 		
 		public Node(T data) {
 			this.data = data;
-		}
+		}	
+	}
 		
+	public Iterator<T> iterator(){
+		return new Iterator<T>() {
+			private Node<T> current = top;
+			
+			@Override
+			public boolean hasNext() {
+				return current != null;
+			}
+			
+			@Override
+			public T next () {
+				T data = current.data;
+				current = current.nextNode;
+				return data;
+			}
+			
+		};
 	}
 	
 	public void push(T data) {
@@ -38,9 +58,13 @@ public class DynamicStack<T> {
 		}
 		return top.data;
 	}
-
+	
 	private boolean isEmpty() {
 		return top == null;
+	}
+	
+	public int size() {
+		return size;
 	}
 	
 }
