@@ -57,6 +57,8 @@ Linked-list-based stack with dynamic size.
 **Use case:**  
 Useful for understanding how stacks can grow dynamically without fixed capacity.
 
+---
+
 - ⏳ Queue (FIFO)
 - ⏳ Deque (Planned)
 
