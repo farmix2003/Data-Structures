@@ -24,7 +24,39 @@ The goal of this project is to master data structures used in **real-world backe
 
 
 ---
-- ⏳ Stack (LIFO)
+- ### ✅ Stack (LIFO)
+  Two stack implementations are included:
+
+#### 1. Static Stack
+Array-based stack with fixed capacity.
+
+**Features:**
+- generic type support
+- push
+- pop
+- peek
+- size
+- full/empty checks
+- custom `toString()`
+
+**Use case:**  
+Useful for understanding stack behavior with fixed memory size.
+
+#### 2. Dynamic Stack
+Linked-list-based stack with dynamic size.
+
+**Features:**
+- generic type support
+- push
+- pop
+- peek
+- size
+- empty check
+- `Iterable<T>` support for traversal
+
+**Use case:**  
+Useful for understanding how stacks can grow dynamically without fixed capacity.
+
 - ⏳ Queue (FIFO)
 - ⏳ Deque (Planned)
 
