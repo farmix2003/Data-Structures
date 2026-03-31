@@ -9,7 +9,21 @@ The goal of this project is to master data structures used in **real-world backe
 ## 🚀 Implemented Data Structures
 
 ### 🔹 Linear Data Structures
-- ✅ Linked List (Singly)
+- ### ✅ Linked List (Singly)
+
+  Implemented a custom singly linked list in Java with support for:
+- add
+- addFirst
+- add at index
+- remove by value
+- get by index
+- reverse
+- size tracking
+- node traversal and printing
+
+
+
+---
 - ⏳ Stack (LIFO)
 - ⏳ Queue (FIFO)
 - ⏳ Deque (Planned)
