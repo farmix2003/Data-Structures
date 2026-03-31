@@ -16,6 +16,7 @@ public class DynamicStack<T> implements Iterable<T> {
 		}	
 	}
 		
+	@Override
 	public Iterator<T> iterator(){
 		return new Iterator<T>() {
 			private Node<T> current = top;

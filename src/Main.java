@@ -14,6 +14,13 @@ public class Main {
 		System.out.println(integer);
 	}
      
+     
+     StaticStack<String> staticStack = new StaticStack<>(3);
+     staticStack.push("Name");
+     staticStack.push("Email");
+     staticStack.push("Phone");
+     
+     System.out.println(staticStack);
 	}
 
 }
