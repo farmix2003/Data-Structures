@@ -34,6 +34,19 @@ public class Main {
      System.out.println(queue.pool());
      System.out.println(queue);
      
+     StaticQueue<Integer> staticQueue = new StaticQueue<>(3);
+     staticQueue.offer(1);
+     staticQueue.offer(2);
+     staticQueue.offer(3);
+     
+     System.out.println(staticQueue);
+     
+     System.out.println(staticQueue.peek());
+     
+     staticQueue.poll();
+     
+     System.out.println(staticQueue);
+     
 	}
 
 }
