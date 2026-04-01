@@ -39,13 +39,26 @@ public class Main {
      staticQueue.offer(2);
      staticQueue.offer(3);
      
-     System.out.println(staticQueue);
+//     System.out.println(staticQueue);
      
-     System.out.println(staticQueue.peek());
+//     System.out.println(staticQueue.peek());
      
      staticQueue.poll();
      
-     System.out.println(staticQueue);
+//     System.out.println(staticQueue);
+     
+     //Deque
+     DynamicDeque<String> dynamicQueue = new DynamicDeque<>();
+     dynamicQueue.addFirst("Hello");
+     dynamicQueue.addFirst("World");
+     dynamicQueue.addFirst("Never");
+     dynamicQueue.addFirst("Java");
+     dynamicQueue.addLast("Me");
+     dynamicQueue.removeFirst();
+     dynamicQueue.removeLast();
+     System.out.println(dynamicQueue.peekFirst());
+     System.out.println(dynamicQueue.peekLast());
+     System.out.println(dynamicQueue);
      
 	}
 
