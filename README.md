@@ -94,7 +94,24 @@ Understanding queue behavior with dynamic memory and efficient O(1) operations.
 
 ---
 
-- ⏳ Deque (Planned)
+#### ✅ Deque (Double-Ended Queue)
+
+Dynamic deque implementation using a doubly linked list.
+
+**Features:**
+- Generic type support
+- addFirst / addLast
+- removeFirst / removeLast
+- peekFirst / peekLast
+- size tracking
+- empty check
+- `Iterable<T>` support for traversal
+- custom `toString()`
+
+**Use case:**  
+Understanding efficient insertion and removal from both ends using a doubly linked list.
+
+---
 
 ### 🔹 Hash-Based Structures
 - ⏳ HashMap (Planned)
@@ -153,6 +170,17 @@ This repository focuses on:
 
 ---
 
+### Deque
+- addFirst → `O(1)`
+- addLast → `O(1)`
+- removeFirst → `O(1)`
+- removeLast → `O(1)`
+- peekFirst → `O(1)`
+- peekLast → `O(1)`
+- size → `O(1)`
+
+---
+
 ## 📌 Why This Repository?
 
 Instead of relying on built-in Java collections, I implemented these structures manually to:
@@ -168,6 +196,7 @@ Instead of relying on built-in Java collections, I implemented these structures 
 - [x] LinkedList
 - [x] Stack
 - [x] Queue
+- [x] Deque 
 - [ ] HashMap
 - [ ] Binary Search Tree
 - [ ] Heap
