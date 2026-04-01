@@ -56,9 +56,14 @@ public class Main {
      dynamicQueue.addLast("Me");
      dynamicQueue.removeFirst();
      dynamicQueue.removeLast();
-     System.out.println(dynamicQueue.peekFirst());
-     System.out.println(dynamicQueue.peekLast());
-     System.out.println(dynamicQueue);
+//     System.out.println(dynamicQueue.peekFirst());
+//     System.out.println(dynamicQueue.peekLast());
+//     System.out.println(dynamicQueue);
+     
+     HashMap<Integer, Integer> hashMap = new HashMap<>();
+     hashMap.put(1, 2);
+     hashMap.put(3, 4);
+     System.out.println(hashMap);
      
 	}
 
