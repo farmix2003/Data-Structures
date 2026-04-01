@@ -59,7 +59,41 @@ Useful for understanding how stacks can grow dynamically without fixed capacity.
 
 ---
 
-- ⏳ Queue (FIFO)
+#### ✅ Queue (FIFO)
+
+Two implementations are provided to understand both fixed and dynamic queue behavior:
+
+### 1. Static Queue (Array-based, Circular)
+Fixed-size queue implemented using a circular array.
+
+**Features:**
+- Generic type support
+- offer / poll / peek
+- size tracking
+- full & empty checks
+- circular indexing (efficient space usage)
+- custom `toString()`
+
+**Use case:**  
+Understanding how queues work with fixed capacity and circular memory reuse.
+
+---
+
+### 2. Dynamic Queue (Linked List-based)
+Queue implementation using nodes with dynamic size.
+
+**Features:**
+- Generic type support
+- offer / poll / peek
+- size tracking
+- empty check
+- `Iterable<T>` support for traversal
+
+**Use case:**  
+Understanding queue behavior with dynamic memory and efficient O(1) operations.
+
+---
+
 - ⏳ Deque (Planned)
 
 ### 🔹 Hash-Based Structures
@@ -91,6 +125,31 @@ This repository focuses on:
 
 - Java (Core)
 - No external libraries (pure implementation)
+
+---
+
+## 📊 Time Complexity
+
+### Linked List
+- add (end) → `O(n)`
+- addFirst → `O(1)`
+- add at index → `O(n)`
+- get → `O(n)`
+- remove → `O(n)`
+- reverse → `O(n)`
+- size → `O(1)`
+
+### Stack (Static & Dynamic)
+- push → `O(1)`
+- pop → `O(1)`
+- peek → `O(1)`
+- size → `O(1)`
+
+### Queue (Static & Dynamic)
+- offer → `O(1)`
+- poll → `O(1)`
+- peek → `O(1)`
+- size → `O(1)`
 
 ---
 
