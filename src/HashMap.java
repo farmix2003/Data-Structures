@@ -4,6 +4,7 @@ public class HashMap<K, V> {
 	private Node<K, V>[] table;
 	private int capacity = 16;
 	private int size = 0;
+    private static final double LOAD_FACTOR = 0.75;
 	
     @SuppressWarnings("unchecked")
 	public HashMap() {
@@ -22,15 +23,16 @@ public class HashMap<K, V> {
 	
 	@SuppressWarnings("unused")
 	private int hash(K key) {
-		return Math.abs(key.hashCode() & 0x7fffffff)%capacity;
+		return (key.hashCode() & 0x7fffffff)%capacity;
 	}
 	
 	public void put(K key, V value) {
-		int index = hash(key);
 		
 		if (key == null) {
 			throw new IllegalArgumentException("Null keys are not supported");
 		}
+		
+		int index = hash(key);
 		
 		Node<K, V> head = table[index];
 		
@@ -41,6 +43,11 @@ public class HashMap<K, V> {
 			}
 			head = head.next;
 		}
+		
+		 if ((double) (size + 1) / capacity > LOAD_FACTOR) {
+	            resize();
+	            index = hash(key);
+	        }
 		
 		Node<K, V> newNode = new Node<>(key, value); 
 		newNode.next = table[index];
@@ -108,6 +115,7 @@ public class HashMap<K, V> {
 			if(current.key.equals(key)) {
 				return true;
 			}
+			current = current.next;
 		}
 		return false;
 	}
@@ -119,6 +127,30 @@ public class HashMap<K, V> {
 	public boolean isEmpty() {
 	    return size == 0;
 	}
+	
+	  @SuppressWarnings("unchecked")
+	    private void resize() {
+	        int oldCapacity = capacity;
+	        Node<K, V>[] oldTable = table;
+
+	        capacity = capacity * 2;
+	        table = new Node[capacity];
+
+	        for (int i = 0; i < oldCapacity; i++) {
+	            Node<K, V> current = oldTable[i];
+
+	            while (current != null) {
+	                Node<K, V> next = current.next;
+
+	                int newIndex = hash(current.key);
+	                current.next = table[newIndex];
+	                table[newIndex] = current;
+
+	                current = next;
+	            }
+	        }
+	    }
+
 
 	@Override
 	public String toString() {
