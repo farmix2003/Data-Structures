@@ -114,7 +114,26 @@ Understanding efficient insertion and removal from both ends using a doubly link
 ---
 
 ### 🔹 Hash-Based Structures
-- ⏳ HashMap (Planned)
+#### ✅ HashMap
+Custom hash map implementation using an array of buckets with linked lists.
+
+**Features:**
+- Generic key-value support
+- put / get / remove
+- containsKey
+- size tracking
+- automatic resizing with rehashing
+- custom `toString()`
+
+**Concepts practiced:**
+- hashing
+- bucket indexing
+- collision resolution
+- load factor
+- resizing and rehashing
+
+  ---
+
 - ⏳ HashSet (Planned)
 
 ### 🔹 Tree Structures
@@ -197,7 +216,7 @@ Instead of relying on built-in Java collections, I implemented these structures 
 - [x] Stack
 - [x] Queue
 - [x] Deque 
-- [ ] HashMap
+- [x] HashMap
 - [ ] Binary Search Tree
 - [ ] Heap
 - [ ] Graph (BFS/DFS)
