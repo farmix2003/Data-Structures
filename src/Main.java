@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Iterator;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -63,8 +66,26 @@ public class Main {
      HashMap<Integer, Integer> hashMap = new HashMap<>();
      hashMap.put(1, 2);
      hashMap.put(3, 4);
-     System.out.println(hashMap);
+//     System.out.println(hashMap);
      
+     
+     MyHashSet<Integer> hashSet = new MyHashSet<>();
+     
+     hashSet.add(1);
+     hashSet.add(2);
+     
+     HashSet<Integer> hashSet2 = new HashSet<>();
+     
+     hashSet2.add(2);
+     hashSet2.add(3);
+     Iterator<Integer> iterator = hashSet.iterator();
+     Integer numInteger;
+     while(iterator.hasNext()) {
+    	 numInteger = iterator.next();
+    	 System.out.println(numInteger);
+     }
+     
+     System.out.println(hashSet.toString());
 	}
 
 }
