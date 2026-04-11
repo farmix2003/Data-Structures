@@ -134,12 +134,27 @@ Custom hash map implementation using an array of buckets with linked lists.
 
   ---
 
-- ⏳ HashSet (Planned)
+#### ✅ HashSet
+Custom implementation built on top of HashMap.
+
+**Features:**
+- Generic type support
+- add / remove / contains
+- no duplicate elements
+- size tracking
+- dynamic resizing (via HashMap)
+
+**Concepts practiced:**
+- set behavior
+- uniqueness enforcement
+- reuse of HashMap structure
 
 ### 🔹 Tree Structures
 - ⏳ Binary Tree (Planned)
 - ⏳ Binary Search Tree (BST)
 - ⏳ Heap / Priority Queue
+
+---
 
 ### 🔹 Graphs
 - ⏳ Graph (BFS, DFS)
@@ -217,6 +232,7 @@ Instead of relying on built-in Java collections, I implemented these structures 
 - [x] Queue
 - [x] Deque 
 - [x] HashMap
+- [x] HashSet
 - [ ] Binary Search Tree
 - [ ] Heap
 - [ ] Graph (BFS/DFS)
