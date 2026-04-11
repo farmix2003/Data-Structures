@@ -59,7 +59,7 @@ Useful for understanding how stacks can grow dynamically without fixed capacity.
 
 ---
 
-#### ✅ Queue (FIFO)
+- #### ✅ Queue (FIFO)
 
 Two implementations are provided to understand both fixed and dynamic queue behavior:
 
