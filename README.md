@@ -149,8 +149,34 @@ Custom implementation built on top of HashMap.
 - uniqueness enforcement
 - reuse of HashMap structure
 
+---
+
 ### 🔹 Tree Structures
-- ⏳ Binary Tree (Planned)
+
+#### ✅ Binary Tree
+
+General binary tree implementation without ordering constraints.
+
+**Features:**
+- Generic type support
+- level-order (BFS) insertion
+- remove using deepest node replacement
+- contains (BFS search)
+- size tracking
+- traversal methods:
+  - in-order
+  - pre-order
+  - post-order
+
+**Concepts practiced:**
+- tree structure fundamentals
+- breadth-first search (BFS)
+- depth-first search (DFS)
+- recursion (tree traversal)
+- node replacement strategy (deletion)
+
+---
+
 - ⏳ Binary Search Tree (BST)
 - ⏳ Heap / Priority Queue
 
@@ -169,6 +195,7 @@ This repository focuses on:
 - Writing clean and optimized Java code
 - Practicing **time & space complexity analysis**
 - Preparing for **technical interviews**
+- Understanding differences between unordered trees and ordered structures (BST)
 
 ---
 
@@ -227,6 +254,14 @@ This repository focuses on:
 - add → `O(1)` average, `O(n)` worst
 - remove → `O(1)` average, `O(n)` worst
 - contains → `O(1)` average, `O(n)` worst
+
+---
+
+### Binary Tree
+- insert (level-order) → `O(n)`
+- contains → `O(n)`
+- remove → `O(n)`
+- traversal → `O(n)`
 
 ---
 
