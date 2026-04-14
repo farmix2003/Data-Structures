@@ -84,8 +84,17 @@ public class Main {
     	 numInteger = iterator.next();
     	 System.out.println(numInteger);
      }
+System.out.println("Binary:");
+     BinaryTree<Integer> binaryTree = new BinaryTree<>();
      
-     System.out.println(hashSet.toString());
+     binaryTree.insert(1);
+     binaryTree.insert(2);
+     binaryTree.insert(3);
+     
+     binaryTree.inOrder();
+     binaryTree.preOrder();
+     binaryTree.postOrder();
+	
 	}
 
 }
