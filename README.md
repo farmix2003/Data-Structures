@@ -59,7 +59,7 @@ Useful for understanding how stacks can grow dynamically without fixed capacity.
 
 ---
 
-#### ✅ Queue (FIFO)
+- #### ✅ Queue (FIFO)
 
 Two implementations are provided to understand both fixed and dynamic queue behavior:
 
@@ -215,10 +215,26 @@ This repository focuses on:
 
 ---
 
+### HashMap
+- put → `O(1)` average, `O(n)` worst
+- get → `O(1)` average, `O(n)` worst
+- remove → `O(1)` average, `O(n)` worst
+- containsKey → `O(1)` average, `O(n)` worst
+
+---
+
+### HashSet
+- add → `O(1)` average, `O(n)` worst
+- remove → `O(1)` average, `O(n)` worst
+- contains → `O(1)` average, `O(n)` worst
+
+---
+
 ## 📌 Why This Repository?
 
 Instead of relying on built-in Java collections, I implemented these structures manually to:
 
+- Reimplement standard Java collections to understand their internal design
 - Deeply understand internal mechanics
 - Improve problem-solving skills
 - Build a strong foundation for backend development
@@ -258,6 +274,6 @@ This is a personal learning project, but suggestions and improvements are always
 ## ⭐ Author
 
 **Farrukh Tugonov**  
-Java Backend Developer | React Developer
+Java Backend Developer | React Developer  
 
----
+📌 Open to opportunities and collaboration
